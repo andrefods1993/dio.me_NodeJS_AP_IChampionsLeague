@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "ES6", // Define a versão do ECMAScript para a qual o TypeScript será compilado.
+		"module": "CommonJS", // Define o sistema de módulos a ser utilizado (CommonJS para Node.js).
+		"outDir": "./dist", // Diretório de saída para os arquivos compilados.
+		"rootDir": "./src", // Diretório raiz dos arquivos de origem.
+		"strict": true, // Ativa todas as verificações estritas.
+		"esModuleInterop": true, // Habilita a interoperabilidade com módulos ES6 que possuem exportações padrão.		"forceConsistentCasingInFileNames": true, // Assegura que o uso de letras maiúsculas/minúsculas nos nomes de arquivos seja consistente.
+		"skipLibCheck": true, // Ignora a checagem dos arquivos de definição de tipo das bibliotecas.
+		"moduleResolution": "node", // Utiliza o modo de resolução de módulos do Node.js.
+		"resolveJsonModule": true, // Permite a importação de arquivos JSON como módulos.
+		"sourceMap": true, // Gera arquivos de mapeamento de origem (.map) para depuração.
+		"baseUrl": ".", // Define a base para a resolução de módulos.
+		"paths": {
+			// Define aliases para módulos ou caminhos.
+			"@src/*": ["src/*"],
+			"@config/*": ["src/config/*"],
+			"@controllers/*": ["src/controllers/*"],
+			"@services/*": ["src/services/*"]
+		}
+	},
+	"include": ["src"], // Inclui todos os arquivos dentro do diretório 'src'.
+	"exclude": ["node_modules", "**/*.test.ts"] // Exclui os módulos de terceiros e arquivos de teste.
+}
